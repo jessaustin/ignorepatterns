@@ -1,5 +1,5 @@
 module.exports = ///
-	^(
+	(^|/)(
 		# Paths that start with something
 		(
 			~|          # vim, gedit, etc
