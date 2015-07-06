@@ -68,6 +68,22 @@ joe.describe 'ignorepatterns', (describe,it) ->
 		# Desktop
 		"desktop.ini": true
 		"desktopaini": false
+
+		# files in directories
+		"/~": true
+		"some/~something": true
+		"/directories/something~": true
+		"before/.#": true
+		"/the/.#something": true
+		"file/.swp": true
+		"/of/something.swp": true
+		"interest/.svn": true
+		"/because/.git": true
+		"sometimes/.hg": true
+		"there/.DS_Store": true
+		"/are/node_modules": true
+		"such/CVS": true
+		"/directories/thumbs.db": true
 	}
 
 	Object.keys(ignoreExpected).forEach (str) ->
