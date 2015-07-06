@@ -49,6 +49,9 @@
     "lib": "./out/lib"
   },
   "scripts": {
+    "build": "coffee --compile src/*/*.coffee",
+    "postbuild": "mkdir -p out/lib out/test; for x in `ls src/*/*.js | sed -e 's/^src//'`; do mv src$x out$x; done",
+    "pretest": "npm run-script build",
     "test": "node ./out/test/ignorepatterns-test.js"
   },
   "main": "./out/lib/ignorepatterns.js"
